@@ -20,52 +20,7 @@
 <script>
 
 export default {
-  data() {
-    return{
-      roomname:'',
-      playername:''
-    }
-  },
-  firebase () {
-    return {
-      rooms: {
-         source: this.$db.ref('/rooms')
-      }
-    }
-  },
-  computed: {
-    listRoom() {
-      return this.rooms.filter(room => {
-        return Object.keys(room).length <= 2
-      })
-    }
-  },
-  methods: {
-    addRoom(roomname,playername) {
-      this.$firebaseRefs.rooms.child(roomname).push({
-        name:playername,
-        score:0
-      })
-    },
-    addPlayer(roomname,playername) {
-      this.$firebaseRefs.rooms.child(roomname).push({
-        name:playername,
-        score:0
-      })
-    },
-    changeScore1(roomname){
-      console.log(this.$firebaseRefs.rooms.child(roomname).push().key);
-      // this.$firebaseRefs.rooms.child(roomname).update({
-      //   score:10
-      // })
-    },
-    changeScore2(roomname){
-      this.$db.ref(roomname +'/player2').update({
-        score:10
-      })
-    }
 
-  }
 
 }
 </script>
