@@ -47,22 +47,18 @@ export default {
   },
   methods: {
     addRoom(roomname, playername) {
-      console.log('roomname ', roomname, 'playername ', playername)
-      this.$firebaseRefs.rooms.child(roomname).push({
+      let tes = this.$firebaseRefs.rooms.child(roomname).push({
         name: playername,
         score: 0
       })
+      this.$firebaseRefs.rooms.child(roomname).child('time').set(30)      
       this.$router.push({
         name: 'MariGoyang',
         params: {
-          roomname: roomname
+          roomname: roomname,
+          playername: playername,
+          playerKey: tes.path.pieces_[2]
         }
-      })
-    },
-    addPlayer(roomname, playername) {
-      this.$firebaseRefs.rooms.child(roomname).push({
-        name: playername,
-        score: 0
       })
     },
     changeScore1(roomname) {

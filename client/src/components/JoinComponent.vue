@@ -3,16 +3,14 @@
     <slot>
     </slot>
     <form class="form-horizontal">
-      <div class="container">
-
         <fieldset>
           <div class="form-group">
             <label class="control-label" for="inputDefault">Guest Name</label>
-            <input type="text" class="col-lg-4 form-control" v-model="playername">
+            <input type="text" class="form-control" v-model="playername">
           </div>
           <div class="form-group">
-            <label for="select" class="col-lg-4 control-label">Selects Room</label>
-            <div class="col-lg-4">
+            <label for="select" class="control-label">Selects Room</label>
+            <div>
               <select class="form-control" id="select" v-model="roomname">
                 <option v-for="room in listRoom" :key="room['.key']" :value="room['.key']">{{room['.key']}}</option>
               </select>
@@ -22,11 +20,10 @@
           <div class="form-group">
             <div class="col-lg-12">
 						  <router-link to="/main" class="btn btn-danger">Back To Main</router-link>
-              <button type="button" @click="addPlayer(roomname,playername)" class="btn btn-success">Submit</button>              
+              <button type="button" @click="addPlayer(roomname,playername)" class="btn btn-success">Submit</button>
             </div>
           </div>
         </fieldset>
-      </div>
     </form>
   </div>
 </template>
@@ -49,26 +46,22 @@ export default {
   computed: {
     listRoom() {
       return this.rooms.filter(room => {
-        return Object.keys(room).length <= 2
+        return Object.keys(room).length <= 3
       })
     }
   },
   methods: {
-    addRoom(roomname,playername) {
-      this.$firebaseRefs.rooms.child(roomname).push({
-        name:playername,
-        score:0
-      })
-    },
     addPlayer(roomname,playername) {
-      this.$firebaseRefs.rooms.child(roomname).push({
+      let tes = this.$firebaseRefs.rooms.child(roomname).push({
         name:playername,
         score:0
       })
       this.$router.push({
         name: 'MariGoyang',
         params: {
-          roomname: roomname
+          roomname: roomname,
+          playername: playername,
+          playerKey: tes.path.pieces_[2]
         }
       })
     },
