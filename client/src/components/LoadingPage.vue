@@ -1,13 +1,15 @@
 <template>
-  <div class="col-sm-4 box">
-	<div class="col-sm-3 box2">
-		<div class="col-sm-2 box3">
-			<div class="col-sm-1 box4">
-				
+	<div class="center">
+		<div class="col-sm-4 box">
+			<div class="col-sm-3 box2">
+				<div class="col-sm-2 box3">
+					<div class="col-sm-1 box4">
+						<router-link :to="'/main'" class="btn btn-default">Back To Main</router-link>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </template>
 
 <script>
