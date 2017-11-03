@@ -4,9 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import gyro from './assets/js/gyro'
+import Vuex from 'vuex'
 
 window.gyro = gyro
 
+Vue.use(Vuex)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
