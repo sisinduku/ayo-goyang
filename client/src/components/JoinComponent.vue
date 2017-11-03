@@ -1,5 +1,7 @@
 <template>
   <div>
+    <slot>
+    </slot>
     <form class="form-horizontal">
       <div class="container">
 
@@ -25,7 +27,7 @@
           </div>
           <div class="form-group">
             <div class="col-lg-12">
-						  <router-link to="main" class="btn btn-danger">Back To Main</router-link>						
+						  <router-link to="/main" class="btn btn-danger">Back To Main</router-link>
               <router-link to="dance-stage" class="btn btn-success">Submit</router-link>
             </div>
           </div>
@@ -41,9 +43,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 body {
-  background-image: url("../assets/giphy.gif")
+  background-image: url("/static/giphy.gif")
 }
 
 input {

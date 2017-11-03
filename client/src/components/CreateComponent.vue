@@ -1,30 +1,29 @@
 <template>
   <div>
-    <div class="container">
-
-      <form class="form-horizontal">
-        <fieldset>
-          <div class="form-group">
-            <label class="control-label" for="inputDefault">Host Name</label>
-            <input type="text" class="form-control" id="hostname" placeholder="host name eg:Aria">
+    <slot>
+    </slot>
+    <form class="form-horizontal">
+      <fieldset>
+        <div class="form-group">
+          <label class="control-label" for="inputDefault">Host Name</label>
+          <input type="text" class="form-control" id="hostname" placeholder="host name eg:Aria">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="inputDefault">Room Name</label>
+          <input type="text" class="form-control" id="roomname" placeholder="room name eg:Ayo Dance">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="inputDefault">Room Key</label>
+          <input type="text" class="form-control" id="roomkey" placeholder="Room key eg:ayodance">
+        </div>
+        <div class="form-group">
+          <div class="col-lg-12">
+            <router-link to="/main" class="btn btn-danger">Back To Main</router-link>
+            <router-link to="dance-stage" class="btn btn-success">Submit</router-link>
           </div>
-          <div class="form-group">
-            <label class="control-label" for="inputDefault">Room Name</label>
-            <input type="text" class="form-control" id="roomname" placeholder="room name eg:Ayo Dance">
-          </div>
-          <div class="form-group">
-            <label class="control-label" for="inputDefault">Room Key</label>
-            <input type="text" class="form-control" id="roomkey" placeholder="Room key eg:ayodance">
-          </div>
-          <div class="form-group">
-            <div class="col-lg-12">
-						  <router-link to="main" class="btn btn-danger">Back To Main</router-link>						
-              <router-link to="dance-stage" class="btn btn-success">Submit</router-link>
-            </div>
-          </div>
-        </fieldset>
-      </form>
-    </div>
+        </div>
+      </fieldset>
+    </form>
   </div>
 </template>
 
@@ -35,9 +34,9 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 body {
-  background-image: url("../assets/giphy.gif")
+  background-image: url("/static/giphy.gif")
 }
 
 .control-label {
