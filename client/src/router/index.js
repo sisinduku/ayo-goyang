@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import PlayerComponent from '@/components/PlayerComponent'
 import HelloWorld from '@/components/HelloWorld'
 import OptionComponent from '@/components/OptionComponent'
 import MainComponent from '@/components/MainComponent'
+
 
 Vue.use(Router)
 
