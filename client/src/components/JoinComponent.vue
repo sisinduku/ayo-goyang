@@ -25,8 +25,8 @@
           </div>
           <div class="form-group">
             <div class="col-lg-12">
-              <button type="reset" class="btn btn-default">Cancel</button>
-              <button type="submit" class="btn btn-primary">Submit</button>
+						  <router-link to="main" class="btn btn-danger">Back To Main</router-link>						
+              <router-link to="dance-stage" class="btn btn-success">Submit</router-link>
             </div>
           </div>
         </fieldset>
