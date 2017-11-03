@@ -18,8 +18,8 @@
           </div>
           <div class="form-group">
             <div class="col-lg-12">
-              <button type="reset" class="btn btn-default">Cancel</button>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-default" id="cancel"><router-link to="main">Cancel</router-link></button>
+              <button type="submit" class="btn btn-primary" id="submit">Submit</button>
             </div>
           </div>
         </fieldset>
@@ -32,6 +32,7 @@
 export default {
 
 }
+
 </script>
 
 <style>

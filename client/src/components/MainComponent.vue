@@ -1,5 +1,6 @@
 <template>
   <div>
+    <img src="../assets/logo.png">
     <div class="jumbotron">
     <h1>AYO GOYANG!!</h1>
     <OptionComponent />
