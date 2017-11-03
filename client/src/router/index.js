@@ -3,10 +3,6 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import OptionComponent from '@/components/OptionComponent'
 import MainComponent from '@/components/MainComponent'
-import CreateComponent from '@/components/CreateComponent'
-import JoinComponent from '@/components/JoinComponent'
-import LoadingPage from '@/components/LoadingPage'
-import DanceStage from '@/components/DanceStage';
 
 Vue.use(Router)
 
