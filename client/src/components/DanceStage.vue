@@ -2,9 +2,11 @@
   <div>
     <div class="col-md-6">
       <h2><span class="label label-primary">Player One</span></h2>
+      <PlayerScore/>
     </div>
     <div class="col-md-6">
       <h2><span class="label label-primary">Player Two</span></h2>
+      <PlayerScore/>
     </div>
     <ul>
       <li>{{gyrox}}</li>
@@ -18,7 +20,11 @@
 </template>
 
 <script>
+import PlayerScore from '@/components/PlayerScore'
 export default {
+  components: {
+    PlayerScore
+  },
   data () {
     return {
       gyrox: '',

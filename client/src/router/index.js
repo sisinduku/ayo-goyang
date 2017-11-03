@@ -32,7 +32,8 @@ export default new Router({
     {
       path: '/loading',
       component: LoadingPage
-    },{
+    },
+    {
       path: '/dance-stage',
       component: DanceStage
     }

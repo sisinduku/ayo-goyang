@@ -1,10 +1,10 @@
 <template>
-	<div class="center">
+	<div class="center" align="middle">
 		<div class="col-sm-4 box">
 			<div class="col-sm-3 box2">
 				<div class="col-sm-2 box3">
 					<div class="col-sm-1 box4">
-						<router-link to="main" class="btn btn-danger">Back To Main</router-link>						
+						<router-link to="main" class="btn btn-danger">Danger</router-link>						
 					</div>
 				</div>
 			</div>
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 body
 {
 	margin:0;
